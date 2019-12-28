@@ -30,7 +30,7 @@
       }
     },
     created() {
-      this.socket = io("http://localhost:3000");
+      this.socket = io("http://localhost:3000"); //à adapter selon l'addresse du serveur
     },
     mounted() {
       this.context = this.$refs.game.getContext("2d");
