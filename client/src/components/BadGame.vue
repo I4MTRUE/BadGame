@@ -15,12 +15,9 @@
     <p>TOUCHES : ZQSD </p>
   </div>
 </template>
-<script> 
-
-</script>
 <script>
+  var title = "test"
   import io from "socket.io-client"
-  
   export default {
     name: 'BadGame',
     data() {
@@ -38,7 +35,7 @@
     },
     mounted() {
       window.addEventListener("keypress", e => {
-      if(String.fromCharCode(e.keyCode) == "d"){this.socket.emit("move", "right");}
+      if(String.fromCharCode(e.keyCode) == "d"){this.socket.emit("move", "right"); title == "ye";}
       if(String.fromCharCode(e.keyCode) == "q"){this.socket.emit("move", "left");}
       if(String.fromCharCode(e.keyCode) == "z"){this.socket.emit("move", "up");}
       if(String.fromCharCode(e.keyCode) == "s"){this.socket.emit("move", "down");}
